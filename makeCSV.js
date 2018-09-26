@@ -3,13 +3,7 @@ const fs = require('fs');
 const csv = require('fast-csv');
 
 let nameString = '';
-
-// for (let i = 0; i < 10; i += 1) {
-//   for (let j = 1; j <= 10; j += 1) {
-//     // nameString += `{"id":"${i}","name":"${faker.commerce.color()} ${faker.hacker.noun()} ${i}"}${'\n'}`; => OBJECT
-//     nameString += `${j + (10 * i)},${faker.commerce.color()} ${faker.hacker.noun()} ${j + (10000000 * i)}${'\n'}`; // => string
-//   }
-// }
+faker.seed(13579);
 
 const addOneMillion = (i) => {
   if (i > 9) {
@@ -29,18 +23,6 @@ const addOneMillion = (i) => {
 };
 
 addOneMillion(0);
-
-
-console.log('created name object!')
-
-// fs.writeFile('./public/names.csv', nameString, (err) => {
-//   if (err) {
-//     return console.log(err);
-//   }
-
-//   console.log("The file was saved!");
-// });
-
 
 // TO READ:
 
